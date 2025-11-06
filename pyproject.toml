@@ -1,0 +1,30 @@
+[project]
+name = "yiwen-package"
+version = "0.1.0"
+description = "一个简单实用的 Python 工具包"
+authors = [
+    {name = "yw.hao",email = "yw.hao@trip.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+]
+
+[tool.poetry]
+packages = [{include = "yiwen_package", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+    "pytest-cov>=4.0.0",
+]
